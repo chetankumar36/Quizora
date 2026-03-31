@@ -14,7 +14,7 @@ const Badge = ({ percent }) => {
   return <span className={resultStyles.badgeNeedsWork}>Needs Work</span>;
 };
 
-export default function MyResultPage({ apiBase = "https://quizora-ffut.onrender.com/" }) {
+export default function MyResultPage({ apiBase = "https://quizora-ffut.onrender.com" }) {
   const [results, setResults] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
