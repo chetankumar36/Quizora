@@ -245,6 +245,34 @@ percentage = (correct / total) * 100
 
 ---
 
+# 🚀 Deployment on Render
+
+Quizora can be deployed on [Render](https://render.com) as a full-stack application with separate services for backend and frontend.
+
+## Backend (Web Service)
+
+- **Root Directory**: `backend`
+- **Build Command**: `npm install`
+- **Start Command**: `npm start`
+- **Environment Variables**:
+  - `MONGODB_URI`: Your MongoDB Atlas connection string
+  - `JWT_SECRET`: Your JWT secret key
+  - `PORT`: Automatically set by Render
+
+## Frontend (Static Site)
+
+- **Root Directory**: `frontend`
+- **Build Command**: `npm run build`
+- **Publish Directory**: `dist`
+- **Environment Variables** (if using Vite env vars):
+  - `VITE_API_BASE`: Your backend's Render URL (e.g., `https://quizora-backend.onrender.com`)
+
+## Auto Deploy
+
+Render automatically deploys changes on every push to the connected GitHub branch (usually `main`).
+
+---
+
 # 🚀 Future Enhancements
 
 * ⏱️ Timer-based quizzes
